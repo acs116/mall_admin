@@ -1,0 +1,36 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="cafe.jjdev.mall.admin.mapper.MemberMapper">
+	<insert id="addAllMember" parameterType="cafe.jjdev.mall.admin.vo.Member">
+		insert into member(
+            member_id
+            , member_pw
+            , member_name
+            , member_email
+            , member_phone
+            , member_address
+			, member_gender
+			, member_level) 
+        values(
+            #{memberId}
+            , #{memberPw}
+            , #{memberName}
+            , #{memberEmail}
+            , #{memberPhone}
+            , #{memberAddress}
+            , #{memberGender}
+            , #{memberLevel}
+        )
+	</insert>
+	<select id="getLoginMember" parameterType="cafe.jjdev.mall.admin.vo.Member" resultType="cafe.jjdev.mall.admin.vo.Member">
+		select 
+			member_id as memberId
+			,member_level as memberLevel
+		from member 
+		where member_id = #{memberId} 
+		and member_pw = #{memberPw}
+	</select>
+</mapper>
+  
