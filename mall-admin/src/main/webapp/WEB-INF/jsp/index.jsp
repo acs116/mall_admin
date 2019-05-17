@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>INDEX</h1>
+	<h1>INDEX 111</h1>
 		<h3>쇼핑몰 관리자 메인 페이지</h3>
 		<a href="${pageContext.request.contextPath }/category/addCategory">카데고리등록</a>
 		<a href="${pageContext.request.contextPath }/category/getCategoryList">카데고리리스트</a>
